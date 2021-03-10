@@ -5,6 +5,10 @@ export default defineConfig({
   },
   title: '卫宁简医',
   layout: false,
+  locale: {
+    default: 'zh-CN',
+    antd: true,
+  },
   routes: [
     {
       path: '/login',
@@ -30,6 +34,11 @@ export default defineConfig({
           path: '/list',
           component: '@/pages/list/index',
         },
+        {
+          name: '注册页',
+          path: '/userregister',
+          component: './UserRegister',
+        },
       ],
     },
   ],
@@ -44,7 +53,8 @@ export default defineConfig({
   headScripts: [
     // { src: './public/config/index.js' },
     {
-      src: 'https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js',
+      src:
+        'https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js',
     },
     {
       content: `if ('addEventListener' in document) {
