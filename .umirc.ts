@@ -16,6 +16,11 @@ export default defineConfig({
       title: '登录',
     },
     {
+      path: '/userLogin',
+      component: '@/pages/UserLogin',
+      title: '用户登录',
+    },
+    {
       path: '/404',
       component: '@/pages/404/404',
       title: '404',
@@ -37,7 +42,12 @@ export default defineConfig({
         {
           name: '注册页',
           path: '/userregister',
-          component: './UserRegister',
+          component: '@/pages/UserRegister/index',
+        },
+        {
+          name: '查询表格',
+          path: '/table',
+          component: '@/pages/table/index',
         },
       ],
     },
