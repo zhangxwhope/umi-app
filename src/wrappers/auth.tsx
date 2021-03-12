@@ -1,12 +1,11 @@
-
-import { Redirect, IRouteComponentProps } from 'umi'
+import { Redirect, IRouteComponentProps } from 'umi';
 
 export default (props: IRouteComponentProps) => {
   // const { isLogin } = useAuth()
-  const isLogin = true
+  const isLogin = true;
   if (isLogin) {
-  return <div>{ props.children }</div>
+    return <div>{props.children}</div>;
   } else {
-    return <Redirect to="/login" />
+    return <Redirect to="/login" />;
   }
-}
+};
